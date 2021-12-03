@@ -198,14 +198,14 @@
 
                 <div class="nk-sidebar-footer">
                     <ul class="nk-menu nk-menu-footer">
-                        @if(sys_settings('page_contact') && get_page_slug(sys_settings('page_contact')))
+                        {{-- @if(sys_settings('page_contact') && get_page_slug(sys_settings('page_contact')))
                             <li class="nk-menu-item">
                                 <a href="{{ route('show.page', get_page_slug(sys_settings('page_contact'))) }}" class="nk-menu-link">
                                     <span class="nk-menu-icon"><em class="icon ni ni-question"></em></span>
                                     <span class="nk-menu-text">{{ __(get_page_name(sys_settings('page_contact'))) }}</span>
                                 </a>
                             </li>
-                        @endif
+                        @endif --}}
                         {!! Panel::lang_switcher('sidebar', ['class' => 'ml-auto']) !!}
                     </ul>
                 </div>

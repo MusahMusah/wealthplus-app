@@ -51,6 +51,22 @@ use Illuminate\Support\Facades\Cookie;
  * @return void
  */
 
+if (!function_exists('setActive')) {
+  /**
+   * Get active url link
+   * @param $string, $decoded
+   * @version 1.0.0
+   * @since 1.0
+   */
+  function setActive(string $path)
+  {
+      if ($path == Route::currentRouteName()) {
+          return 'active';
+      }
+  }
+
+}
+
 if (!function_exists('is_json')) {
     /**
      * check json value

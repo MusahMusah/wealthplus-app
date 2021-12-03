@@ -79,7 +79,7 @@
             <div class="form-group">
                 <div class="custom-control custom-control-xs custom-checkbox">
                     <input type="checkbox" name="confirmation" class="custom-control-input{{ $errors->has('confirmation') ? ' error' : ''}}" id="checkbox" data-msg-required=" {{ __("You should accept our terms.") }}" required>
-                    <label class="custom-control-label" for="checkbox">{!! __('I have agree to the :terms', ['terms' => get_page_link('terms', __("Terms & Condition"), true)]) !!}</label>
+                    <label class="custom-control-label" for="checkbox">I have agree to the <a href="{{ route('page', 'terms') }}" target="_blank">Terms &amp; Condition</a></label>
                 </div>
             </div>
             @endif

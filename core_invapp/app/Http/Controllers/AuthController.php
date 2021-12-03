@@ -55,10 +55,10 @@ class  AuthController extends Controller
      */
     public function registerForm()
     {
-        $installer = $this->isInstalled();
-        if (!empty($installer)) {
-            return redirect()->route($installer);
-        }
+        // $installer = $this->isInstalled();
+        // if (!empty($installer)) {
+        //     return redirect()->route($installer);
+        // }
 
         if (disabled_signup()) {
             return redirect()->route('auth.login.form')->withErrors(['notice' => __('New registration is not allowed. Please feel free to contact us for more information.')]);

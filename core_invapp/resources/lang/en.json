@@ -1,4 +1,9 @@
 {
+    "Meta Title: about-us": "About us",
+    "Meta Title: faqs": "Faq",
+    "Meta Title: terms-and-condition": "Terms and Conditions",
+    "Meta Title: privacy-policy": "Privacy",
+    "Meta Title: contact-us": "Contact",
     "pagination.previous": "&laquo; Previous",
     "pagination.next": "Next &raquo;",
     "passwords.password": "Passwords must be at least six characters and match the confirmation.",

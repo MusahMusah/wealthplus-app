@@ -14,10 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Route::get('/', 'PublicController@welcome')->name('welcome');
-Route::view("/", 'frontendnew.home');
+Route::view("/", 'frontendnew.home')->name('welcome');
 Route::get('/language', 'PublicController@language')->name('language');
 Route::get('/investments', 'PublicController@investments')->name('investments');
-Route::get('/page/{slug}', 'PageController')->name('show.page');
+Route::get('/{page}', 'PagesController')
+->name('page')
+->where('page', 'about-us|contact-us|faqs|terms-and-condition|privacy-policy');
+// Route::get('/page/{slug}', 'PageController')->name('show.page');
 Route::post('/policy-consent', 'PublicController@gdprCookie')->name('gdpr.cookie');
 
 Route::middleware(['guest'])->group(function(){

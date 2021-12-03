@@ -17,13 +17,13 @@ $nav_alone = (isset($attr['alone']) && $attr['alone']) ? true : false;
 	<ul class="nav nav-sm{{ $nav_class }}">
 	@endif
 
-		@foreach ($items as $menu)
+		{{-- @foreach ($items as $menu)
 		@if( (Auth::check() && $menu->access =='login') || ($menu->access =='public') )
 		<li class="nav-item{{ (request()->url()==$menu->link) ? ' active' : '' }}">
 			<a class="nav-link" href="{{ $menu->link }}"{!! ($menu->menu_link) ? ' target="_blank"' : '' !!}>{{ __($menu->text) }}</a>
 		</li>
 		@endif
-		@endforeach
+		@endforeach --}}
 
 		{!! Panel::lang_switcher() !!}
 
